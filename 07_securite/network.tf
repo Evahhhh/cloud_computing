@@ -13,7 +13,7 @@ resource "aws_subnet" "private" {
 
 # Security Group : HTTPS entrant uniquement, sortie interne seulement
 resource "aws_security_group" "app" {
-  name   = "sg-app-securisee"
+  name   = "app-securisee-sg"
   vpc_id = aws_vpc.main.id
 
   ingress {
