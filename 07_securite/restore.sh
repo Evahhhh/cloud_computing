@@ -23,7 +23,7 @@ case $SCENARIO in
   "network-lockdown")
     log "LOCKDOWN reseau - blocage urgence"
     awslocal ec2 revoke-security-group-ingress \
-      --group-name sg-app-securisee --protocol tcp \
+      --group-name app-securisee-sg --protocol tcp \
       --port 0-65535 --cidr 0.0.0.0/0
     log "Reseau isole"
     ;;
